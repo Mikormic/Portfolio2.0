@@ -19,6 +19,7 @@ import P4 from './components/P4.vue'
 import Twitter from './components/Twitter.vue'
 import MyTcg from './components/MyTcg.vue'
 import NewsFeed from './components/NewsFeed.vue'
+import About from './components/About.vue'
 
 const routes = [
   { path: '/', component: WindowsFile },
@@ -26,6 +27,7 @@ const routes = [
   { path: '/twitter', component: Twitter },
   { path: '/my-tcg', component: MyTcg},
   { path: '/newsfeed', component: NewsFeed},
+  { path: '/about', component: About},
 ]
 
 const router = createRouter({

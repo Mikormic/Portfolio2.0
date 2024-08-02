@@ -17,13 +17,15 @@
   </RouterLink>
     <ul class="animate__animated animate__backInUp">
       <li>
-        <a href="/">À propos</a>
+        <RouterLink class="linkto" to="/about"><span>À propos</span></RouterLink>
+       
       </li>
       <li>
-        <a href="/">CV</a>
+        <RouterLink class="linkto" to="/about"><span>CV</span></RouterLink>
+
       </li>
       <li>
-        <a href="/">mickael.lesueur@epitech.eu</a>
+        <a class="linkto" href="mailto:mickael.lesueur@epitech.eu"><span>mickael.lesueur@epitech.eu</span></a>
       </li>
     </ul>
   </div>
@@ -64,6 +66,9 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.linkto{
+  color: #ffffff;
+}
 .arrow{
     position: fixed !important;
     width: 6vw;
