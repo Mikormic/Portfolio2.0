@@ -3,46 +3,90 @@
         <h1 :style="{ opacity: titleOpacity }" id="h1-twitter">NewsFeed</h1>
         <div id="container-show" style="display: flex; flex-direction: column;">
             <v-container class="container" style="display: flex;">
-                <img src="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg" alt="" srcset=""
-                    class="animate__animated animate__fadeInTopLeft">
+                <img class="depth-effect" @click="showModal1 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+                    src="../assets/newsfeed/Newsfeed-home.PNG" alt="Aperçu" />
+
+                <div v-if="showModal1" @click="showModal1 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="/src/assets/newsfeed/Newsfeed-home.PNG" />
+                    </div>
+                </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum assumenda id neque quisquam maiores debitis laudantium ex ipsum ad fugiat! Enim saepe ex praesentium rem provident at, corrupti est pariatur.</p>
+                    <h2>Page d'accueil NewsFeed</h2>
+                    <p>Visualisation des projets sur lesquels on est affilié.</p>
                 </div>
             </v-container>
             <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img style="width: 60vw;height: 30vw;" src="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg" alt="" srcset=""
-                    class="animate__animated animate__fadeInTopRight">
+                <img @click="showModal2 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+                    src="../assets/newsfeed/Newsfeed-creation.PNG" alt="" srcset="" class="depth-right">
+                <div v-if="showModal2" @click="showModal2 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-creation.PNG" class="responsive" />
+                    </div>
+                </div>
                 <div>
-                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione deserunt ut dolore quos a, eveniet debitis inventore veritatis id, eaque reiciendis iusto laborum commodi libero placeat maxime facere autem. Accusantium!</p>
+                    <h2>Page de choix de type de report</h2>
+                    <ul>
+                        <li>
+                            <strong>Choix du type de report</strong>
+                            <ul>
+                                <li>Historique des reports selon le report choisi</li>
+                                <li>Crétation du mail</li>
+                                <li>Possibilité de définir le mail comme important ou non</li>
+                            </ul> 
+                            </li>
+                    </ul>
                 </div>
             </v-container>
             <v-container class="container" style="display: flex;">
-                <img style="width: 60vw;height: 30vw;" src="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg" alt="" srcset="">
+                <img @click="showModal3 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-effect"
+                    src="../assets/newsfeed/Newsfeed-mail-teams.PNG" alt="" srcset="">
+                <div v-if="showModal3" @click="showModal3 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-mail-teams.PNG" class="responsive" />
+                    </div>
+                </div>
+
                 <div>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis repellat ad ipsa porro, id itaque excepturi perspiciatis animi earum similique mollitia. Velit officia quis corporis doloribus deleniti id voluptates!</p>
+                    <h2>Visuel mail/teams</h2>
+                    <p>Tableau comportant les mails et canaux teams liée au projet</p>
                 </div>
 
             </v-container>
             <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img src="https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg" alt="" srcset="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam dolores quidem, corrupti illum, a
-                    minima
-                    aperiam ex expedita quibusdam odio rerum. Aut expedita doloremque, accusamus quos et sunt
-                    consectetur
-                    impedit.
-                    Aliquam illo explicabo reiciendis recusandae iure sequi, minus autem accusamus accusantium dolore
-                    officiis quae obcaecati molestiae repellendus expedita quam vel ab at consectetur sunt optio. Odio
-                    voluptas quod distinctio aliquam?
-                    Iure ipsam ab explicabo eaque assumenda temporibus aperiam, culpa error dolorem voluptatum quisquam
-                    sint
-                    excepturi odit quasi debitis rem, ratione incidunt dolores quae id saepe! Repudiandae optio nesciunt
-                    vero natus.</p>
+                <img @click="showModal4 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-right" src="../assets/newsfeed/Newsfeed-preview.PNG"
+                    alt="" srcset="">
+                    <div v-if="showModal4" @click="showModal4 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-preview.PNG" class="responsive" />
+                    </div>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>Visualisation du mail</strong></li>
+                        <ol>
+                            <li><strong>Preview du mail</strong>
+                                <ul>
+                                    <li>Visuel du mail créer pour outlook</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </ul>
+
+                </div>
             </v-container>
         </div>
     </div>
+    <Comments />
+
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const showModal1 = ref(false);
+const showModal2 = ref(false);
+const showModal3 = ref(false);
+const showModal4 = ref(false);
 
 const titleOpacity = ref(1);
 
@@ -61,9 +105,23 @@ onBeforeUnmount(() => {
 });
 </script>
 <style>
-.container{
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.container {
     margin: 3%;
 }
+
 #div-twitter {
     padding-top: 10vw;
 }
@@ -80,9 +138,6 @@ onBeforeUnmount(() => {
     text-align: center;
 }
 
-img {
-    width: 30vw;
-}
 
 h2 {
     color: #ffffff
@@ -94,5 +149,29 @@ h3 {
 
 li {
     color: #ffffff;
+}
+
+.depth-effect {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Arrondir les coins */
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.11);
+    /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation de l'effet de profondeur */
+}
+
+.depth-right {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Arrondir les coins */
+    box-shadow: -20px 10px 10px rgba(0, 0, 0, 0.11);
+    /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation de l'effet de profondeur */
 }
 </style>

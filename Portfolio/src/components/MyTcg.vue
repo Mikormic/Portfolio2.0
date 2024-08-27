@@ -68,6 +68,8 @@
      </div>
     </div>
 </div>
+<Comments />
+
 </template>
 
 <script setup lang="ts">

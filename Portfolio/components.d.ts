@@ -8,7 +8,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     About: typeof import('./src/components/About.vue')['default']
-    Home: typeof import('./src/components/Home.vue')['default']
+    Comments: typeof import('./src/components/Comments.vue')['default']
+    CV: typeof import('./src/components/CV.vue')['default']
     MyTcg: typeof import('./src/components/MyTcg.vue')['default']
     NewsFeed: typeof import('./src/components/NewsFeed.vue')['default']
     P4: typeof import('./src/components/P4.vue')['default']

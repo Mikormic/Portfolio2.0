@@ -2,11 +2,11 @@
   <v-container class="animation-container">
     <div class="square">
       <div v-for="(item, index) in items" :key="index"
-           :class="['item', `position-${positions[index]}`, { 'hovered-item': hoveredIndex === index }]"
-           @mouseover="onHover(index)" @mouseleave="onLeave">
-           <a :href=" item.src "><v-img width="30" :src=" item.src "></v-img>ok</a>
-        </div>
+        :class="['item', `position-${positions[index]}`, { 'hovered-item': hoveredIndex === index }]"
+        @mouseover="onHover(index)" @mouseleave="onLeave">
+          <a :href="links[index].src"><v-img width="30" :src="item.src"></v-img>ok</a>
       </div>
+    </div>
   </v-container>
 </template>
 
@@ -19,13 +19,19 @@ const items = ref([
   { src: ('../src/assets/icons/icons8-linkedin-50.png') },
   { src: ('../src/assets/icons/icons8-twitter-50.png') }
 ]);
+const links = ref([
+  { src: ('https://github.com/Mikormic/Portfolio2.0') },
+  { src: ('https://www.instagram.com/pansatv_/') },
+  { src: ('https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/') },
+  { src: ('https://x.com/elonmusk') }
+])
 const positions = ref([0, 1, 3, 2]); // Initial positions: top-left, top-right, bottom-right, bottom-left
 const isHovered = ref(false);
 const hoveredIndex = ref<number | null>(null);
 const onHover = (index: number) => {
   isHovered.value = true;
   hoveredIndex.value = index;
-  
+
   // Get the positions of the items not being hovered
   const otherPositions = positions.value.filter((_, i) => i !== index);
 
@@ -94,11 +100,13 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
 }
-a{
+
+a {
   text-decoration: none;
   color: transparent;
 }
-a:visited{
+
+a:visited {
   text-decoration: none;
   color: transparent;
 }
@@ -131,5 +139,4 @@ a:visited{
 .position-3 {
   transform: translate(100px, 100px);
 }
-
 </style>

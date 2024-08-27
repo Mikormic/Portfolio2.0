@@ -3,8 +3,14 @@
         <h1 :style="{ opacity: titleOpacity }" id="h1-twitter">Twitter</h1>
         <div id="container-show" style="display: flex; flex-direction: column;">
             <v-container class="container" style="display: flex;">
-                <img style="margin: 2%;" src="../assets/twitter/inscription.png" alt="" srcset=""
-                    class="depth-effect">
+                <img class="depth-effect" @click="showModal1 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+                    src="../assets/twitter/inscription.png" alt="Aperçu" />
+
+                <div v-if="showModal1" @click="showModal1 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="/src/assets/twitter/inscription.png" />
+                    </div>
+                </div>
                 <div>
                     <h2>Formulaire d'inscription "Rejoignez DeadBird"</h2>
                     <p>L'image montre une fenêtre modale d'inscription pour le service "DeadBird", qui est la première
@@ -32,8 +38,13 @@
                 </div>
             </v-container>
             <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img style="width: 60vw;height: 30vw;" src="../assets/twitter/tl.png" alt="" srcset=""
-                class="depth-right">
+                <img @click="showModal2 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+                    src="../assets/twitter/tl.png" alt="" srcset="" class="depth-right">
+                <div v-if="showModal2" @click="showModal2 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/twitter/tl.png" class="responsive" />
+                    </div>
+                </div>
                 <div>
                     <h2>Interface utilisateur de DeadBird</h2>
                     <p>L'image montre l'interface principale de l'application DeadBird, un réseau social développé avec
@@ -85,7 +96,14 @@
                 </div>
             </v-container>
             <v-container class="container" style="display: flex;">
-                <img class="depth-effect" style="width: 60vw;height: 30vw; margin: 2%;" src="../assets/twitter/profil.png" alt="" srcset="">
+                <img @click="showModal3 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-effect"
+                    src="../assets/twitter/profil.png" alt="" srcset="">
+                <div v-if="showModal3" @click="showModal3 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/twitter/profil.png" class="responsive" />
+                    </div>
+                </div>
+
                 <div>
                     <h2>Interface utilisateur de profil DeadBird</h2>
                     <p>L'image montre l'interface de la page de profil utilisateur de l'application DeadBird, un réseau
@@ -142,7 +160,13 @@
 
             </v-container>
             <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img class="depth-right" style="margin: 2%;" src="../assets/twitter/message.gif" alt="" srcset="">
+                <img @click="showModal4 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-right" src="../assets/twitter/message.gif"
+                    alt="" srcset="">
+                    <div v-if="showModal4" @click="showModal4 = false" class="modal">
+                    <div class="modal-content" @click.stop>
+                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/twitter/message.gif" class="responsive" />
+                    </div>
+                </div>
                 <div>
                     <ul>
                         <li><strong>Messagerie inspirée de Twitter</strong></li>
@@ -188,9 +212,16 @@
             </v-container>
         </div>
     </div>
+    <Comments />
+
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const showModal1 = ref(false);
+const showModal2 = ref(false);
+const showModal3 = ref(false);
+const showModal4 = ref(false);
 
 const titleOpacity = ref(1);
 
@@ -209,6 +240,19 @@ onBeforeUnmount(() => {
 });
 </script>
 <style>
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
 .container {
     margin: 3%;
 }
@@ -229,9 +273,6 @@ onBeforeUnmount(() => {
     text-align: center;
 }
 
-img {
-    width: 30vw;
-}
 
 h2 {
     color: #ffffff
@@ -246,19 +287,26 @@ li {
 }
 
 .depth-effect {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px; /* Arrondir les coins */
-  box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.11); /* Ombre pour l'effet de profondeur */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation de l'effet de profondeur */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Arrondir les coins */
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.11);
+    /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation de l'effet de profondeur */
 }
+
 .depth-right {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px; /* Arrondir les coins */
-  box-shadow: -20px 10px 10px rgba(0, 0, 0, 0.11); /* Ombre pour l'effet de profondeur */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation de l'effet de profondeur */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Arrondir les coins */
+    box-shadow: -20px 10px 10px rgba(0, 0, 0, 0.11);
+    /* Ombre pour l'effet de profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation de l'effet de profondeur */
 }
 </style>

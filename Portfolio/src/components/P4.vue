@@ -18,48 +18,63 @@
         </div>
         <div id="p4">
             <ul>
-        <li><strong>Nom du repository:</strong> puissance4</li>
-        <li><strong>Langages utilisés:</strong> JavaScript (ES6), HTML, CSS</li>
-    </ul>
+                <li><strong>Nom du repository:</strong> puissance4</li>
+                <li><strong>Langages utilisés:</strong> JavaScript (ES6), HTML, CSS</li>
+            </ul>
 
-    <h2>Résumé du Projet</h2>
-    <p>Le projet consiste à créer une version interactive du jeu classique "Puissance 4" en utilisant JavaScript pour la logique du jeu, et HTML/CSS pour l'interface utilisateur. Le jeu est conçu comme un plugin JavaScript modulable, permettant de personnaliser plusieurs paramètres, comme la taille de la grille, les couleurs des joueurs, et les noms des joueurs.</p>
+            <h2>Résumé du Projet</h2>
+            <p>Le projet consiste à créer une version interactive du jeu classique "Puissance 4" en utilisant JavaScript
+                pour la logique du jeu, et HTML/CSS pour l'interface utilisateur. Le jeu est conçu comme un plugin
+                JavaScript modulable, permettant de personnaliser plusieurs paramètres, comme la taille de la grille, les
+                couleurs des joueurs, et les noms des joueurs.</p>
 
-    <h2>Notions Abordées</h2>
-    <ul>
-        <li>JavaScript (ES6)</li>
-        <li>Algorithmie</li>
-        <li>Implémentation de jeu</li>
-    </ul>
+            <h2>Notions Abordées</h2>
+            <ul>
+                <li>JavaScript (ES6)</li>
+                <li>Algorithmie</li>
+                <li>Implémentation de jeu</li>
+            </ul>
 
-    <h2>Règles du Jeu</h2>
-    <ol>
-        <li><strong>Nombre de Joueurs:</strong> Deux joueurs (traditionnellement Rouge et Jaune).</li>
-        <li><strong>Surface de Jeu:</strong> Grille de dimensions variables.</li>
-        <li><strong>Tour de Jeu:</strong> Les joueurs placent à tour de rôle un pion dans une colonne. Le pion descend jusqu'à la position la plus basse disponible.</li>
-        <li><strong>Conditions de Victoire:</strong> Aligner 4 pions horizontalement, verticalement ou en diagonale.</li>
-        <li><strong>Fin de Partie:</strong> La partie se termine lorsqu'un joueur aligne 4 pions ou que la grille est pleine sans possibilité de victoire, déclarant la partie nulle.</li>
-    </ol>
+            <h2>Règles du Jeu</h2>
+            <ol>
+                <li><strong>Nombre de Joueurs:</strong> Deux joueurs (traditionnellement Rouge et Jaune).</li>
+                <li><strong>Surface de Jeu:</strong> Grille de dimensions variables.</li>
+                <li><strong>Tour de Jeu:</strong> Les joueurs placent à tour de rôle un pion dans une colonne. Le pion
+                    descend jusqu'à la position la plus basse disponible.</li>
+                <li><strong>Conditions de Victoire:</strong> Aligner 4 pions horizontalement, verticalement ou en diagonale.
+                </li>
+                <li><strong>Fin de Partie:</strong> La partie se termine lorsqu'un joueur aligne 4 pions ou que la grille
+                    est pleine sans possibilité de victoire, déclarant la partie nulle.</li>
+            </ol>
 
-    <h2>Fonctionnalités Implémentées</h2>
-    <ul>
-        <li><strong>Affichage de la Grille:</strong> Utilisation du DOM pour afficher et mettre à jour le plateau de jeu.</li>
-        <li><strong>Gestion des Données:</strong> Système d'information structuré avec des classes pour les joueurs et les cellules du plateau.</li>
-        <li><strong>Gameplay:</strong> Sélection de colonne pour placer un pion, alternance de tour entre les joueurs.</li>
-        <li><strong>Vérification de Victoire:</strong> Algorithmes pour vérifier l'alignement de 4 pions après chaque coup.</li>
-        <li><strong>Animation:</strong> Animation de la chute du pion de la position haute à la position basse.</li>
-        <li><strong>Écran de Victoire:</strong> Affichage d'un message de victoire avec le nom du joueur gagnant, possibilité de relancer une partie.</li>
-        <li><strong>Personnalisation:</strong> Choix du pseudo des joueurs, couleur des jetons, et dimensions de la grille.</li>
-    </ul>
+            <h2>Fonctionnalités Implémentées</h2>
+            <ul>
+                <li><strong>Affichage de la Grille:</strong> Utilisation du DOM pour afficher et mettre à jour le plateau de
+                    jeu.</li>
+                <li><strong>Gestion des Données:</strong> Système d'information structuré avec des classes pour les joueurs
+                    et les cellules du plateau.</li>
+                <li><strong>Gameplay:</strong> Sélection de colonne pour placer un pion, alternance de tour entre les
+                    joueurs.</li>
+                <li><strong>Vérification de Victoire:</strong> Algorithmes pour vérifier l'alignement de 4 pions après
+                    chaque coup.</li>
+                <li><strong>Animation:</strong> Animation de la chute du pion de la position haute à la position basse.</li>
+                <li><strong>Écran de Victoire:</strong> Affichage d'un message de victoire avec le nom du joueur gagnant,
+                    possibilité de relancer une partie.</li>
+                <li><strong>Personnalisation:</strong> Choix du pseudo des joueurs, couleur des jetons, et dimensions de la
+                    grille.</li>
+            </ul>
 
-    <h2>Fonctionnalités Avancées</h2>
-    <ul>
-        <li><strong>Écran de Fin de Partie en Cas de Nul:</strong> Gestion de l'écran de fin de partie quand toutes les cases sont remplies sans vainqueur.</li>
-        <li><strong>Annulation du Dernier Coup:</strong> Permet à un joueur d'annuler son dernier coup.</li>
-        <li><strong>Score des Parties Précédentes:</strong> Affichage des scores cumulés des parties précédentes.</li>
-    </ul>
+            <h2>Fonctionnalités Avancées</h2>
+            <ul>
+                <li><strong>Écran de Fin de Partie en Cas de Nul:</strong> Gestion de l'écran de fin de partie quand toutes
+                    les cases sont remplies sans vainqueur.</li>
+                <li><strong>Annulation du Dernier Coup:</strong> Permet à un joueur d'annuler son dernier coup.</li>
+                <li><strong>Score des Parties Précédentes:</strong> Affichage des scores cumulés des parties précédentes.
+                </li>
+            </ul>
         </div>
     </div>
+    <Comments />
 </template>
 
 <script setup lang="ts">
@@ -68,23 +83,24 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const titleOpacity = ref(1);
 
 const handleScroll = () => {
-  const maxScroll = 200; // Ajustez cette valeur selon vos besoins
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  titleOpacity.value = Math.max(0, 1 - scrollTop / maxScroll);
+    const maxScroll = 200;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    titleOpacity.value = Math.max(0, 1 - scrollTop / maxScroll);
 };
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll);
 });
 </script>
 <style>
-h2{
+h2 {
     padding: 2% 0 1% 0;
 }
+
 #h1-p4 {
     top: 10vw;
     position: relative;
@@ -92,22 +108,22 @@ h2{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 8.4vw;
-    /* Ajuste la taille pour la responsivité */
     font-family: 'Druk Text Wide Heavy Trial', sans-serif;
     max-width: 100%;
-    /* Assure que le texte ne dépasse pas la largeur de son conteneur */
     text-align: center;
-    /* Alignement à droite */
 }
-#p4{
+
+#p4 {
     color: #ffffff;
     position: relative;
     top: 20vw;
     padding: 2% 5% 1% 5%;
 }
-p{
+
+p {
     color: #ffffff;
 }
+
 .slider {
     width: 100%;
     border: 5px solid rgb(255, 255, 255);
@@ -153,4 +169,5 @@ p{
     to {
         left: calc(var(--width) * -1);
     }
-}</style>
+}
+</style>

@@ -20,6 +20,7 @@ import Twitter from './components/Twitter.vue'
 import MyTcg from './components/MyTcg.vue'
 import NewsFeed from './components/NewsFeed.vue'
 import About from './components/About.vue'
+import CV from './components/CV.vue'
 
 const routes = [
   { path: '/', component: WindowsFile },
@@ -28,6 +29,7 @@ const routes = [
   { path: '/my-tcg', component: MyTcg},
   { path: '/newsfeed', component: NewsFeed},
   { path: '/about', component: About},
+  { path: '/cv', component: CV},
 ]
 
 const router = createRouter({

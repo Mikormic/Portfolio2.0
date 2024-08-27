@@ -1,10 +1,10 @@
 <template>
     <Square class="background-square" />
     <v-container class="perspective-box-far">
-        <RouterLink class="face front" to="/puissance4"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': showAnimations }">Puissance4</h1></RouterLink>
-        <RouterLink class="face front" to="/twitter"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': showAnimations }">Twitter</h1></RouterLink>
-        <RouterLink class="face front" to="/my-tcg"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': showAnimations }">TCG</h1></RouterLink>
-        <RouterLink class="face front" to="/newsfeed"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': showAnimations }">NewsFeed</h1></RouterLink>
+        <RouterLink class="face front" to="/puissance4"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">Puissance4</h1></RouterLink>
+        <RouterLink class="face front" to="/twitter"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">Twitter</h1></RouterLink>
+        <RouterLink class="face front" to="/my-tcg"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">TCG</h1></RouterLink>
+        <RouterLink class="face front" to="/newsfeed"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">NewsFeed</h1></RouterLink>
     </v-container>
 </template>
 
@@ -12,17 +12,16 @@
 import { ref, onMounted } from 'vue';
 import 'animate.css';
 
-const showAnimations = ref(true);
+const Animations = ref(true);
 
 onMounted(() => {
   const hasVisited = localStorage.getItem('hasVisited');
   if (hasVisited) {
-    showAnimations.value = false;
+    Animations.value = false;
   } else {
     localStorage.setItem('hasVisited', 'true');
   }
 });
-
 </script>
 
 <style>
@@ -33,7 +32,7 @@ onMounted(() => {
 
 .background-square {
   position: fixed;
-  bottom: 18%;
+  bottom: 25%;
   left: -30vw;
   height: 1vh;
 }
@@ -120,7 +119,74 @@ li a:visited{
   width: 95%;
   display: flex;
   flex-direction: column;
-  max-width: 100vw; /* Assure que le conteneur ne dépasse pas la largeur de l'écran */
-  text-align: right; /* Alignement à droite pour tous les enfants */
+  max-width: 100vw; 
+  text-align: right; 
 }
+/* Petits écrans (téléphones en mode portrait) */
+@media (max-width: 519px) {
+  .perspective-box-far {
+  position: fixed;
+  top: 60vw;
+  margin-right: 200px !important;
+}
+
+.face {
+  font-size: 30vw;
+}
+
+.h1-home{
+  font-size: 10vw;
+  animation-duration: 5s;
+}
+
+.background-square {
+  position: fixed;
+  bottom: 20%;
+  left: -30vw;
+}
+
+}
+
+@media (min-width: 520px) and (max-width: 599px) {
+  .perspective-box-far {
+  position: fixed;
+  bottom: 1vw;
+}
+
+.face {
+  font-size: 30vw;
+}
+
+.h1-home{
+  font-size: 10vw;
+  animation-duration: 5s;
+}
+
+.background-square {
+  position: fixed;
+  top: 20%;
+  right: -50vw;
+}
+
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .background-square {
+  position: fixed;
+  bottom: 32%;
+  left: -30vw;
+  height: 1vh;
+}
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .background-square {
+  position: fixed;
+  bottom: 30%;
+  left: -30vw;
+  height: 1vh;
+}
+}
+
 </style>
