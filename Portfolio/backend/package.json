@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "vite preview",  
-    "build": "vue-tsc --noEmit && vite build", 
-    "dev": "vite", 
-    "serve": "vite preview"  
+    "build": "vue-tsc --noEmit && vite build",  
+    "dev": "vite",  
+    "serve": "vite preview" 
   },
   "dependencies": {
     "vue": "^3.2.37",
