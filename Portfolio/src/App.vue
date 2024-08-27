@@ -1,8 +1,8 @@
 <template>
   <main>
     <RouterLink to="/">
-      <img v-if="showArrow" style="width: 10vw;" class="arrow animate__animated animate__backInUp"
-        src="https://media.tenor.com/xxUK8KWCD1AAAAAj/spiderman.gif" alt="" srcset="">
+      <img v-if="showArrow" style="width: 5vw;" class="arrow animate__animated animate__backInUp"
+        src="../src/assets/icons/vers-le-haut.png" alt="" srcset="">
     </RouterLink>
     <v-container v-if="isHomePage" class="navme">
 
@@ -76,9 +76,8 @@ onUnmounted(() => {
 <style scoped>
 .arrow {
   position: fixed !important;
-  width: 6vw;
   right: 10px;
-  z-index: 1000;
+  transform: rotate(180deg) !important;
 }
 
 .navme {
