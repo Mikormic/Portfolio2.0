@@ -60,7 +60,7 @@ const handleScroll = () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   titleOpacity.value = Math.max(0, 1 - scrollTop / maxScroll);
   hasScrolled.value = window.scrollY > 0;
-  showArrow.value = hasScrolled.value && route.path !== '/';
+  showArrow.value = hasScrolled.value && (route.path !== '/' && route.path !== '/cv' && route.path !== '/about');
 };
 
 onMounted(() => {
