@@ -14,11 +14,12 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const items = ref([
-  { src: ('/assets/icons/icons8-git-50.png') },
-  { src: ('/assets/icons/icons8-instagram-50.png') },
-  { src: ('/assets/icons/icons8-linkedin-50.png') },
-  { src: ('/assets/icons/icons8-twitter-50.png') }
+  { src: new URL('@/assets/icons/icons8-git-50.png', import.meta.url).href },
+  { src: new URL('@/assets/icons/icons8-instagram-50.png', import.meta.url).href },
+  { src: new URL('@/assets/icons/icons8-linkedin-50.png', import.meta.url).href },
+  { src: new URL('@/assets/icons/icons8-twitter-50.png', import.meta.url).href }
 ]);
+
 const links = ref([
   { src: ('https://github.com/Mikormic/Portfolio2.0') },
   { src: ('https://www.instagram.com/pansatv_/') },
