@@ -200,7 +200,7 @@ app.post('/newsfeed/like', async (req, res) => {
 
   const result = await collection.updateOne(
       { _id: new ObjectId(id) },
-      { $inc: { like: 1 }, $push: { likes: userIp } }  // Ajoute l'IP à la liste des likes
+      { $inc: { like: 1 }, $push: { likes: userIp } } 
   );
 
   res.json(result);

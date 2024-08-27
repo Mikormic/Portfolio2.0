@@ -55,19 +55,19 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'https://mike-co.onrender.com/puissance4/show';
+        url = 'https://backend-ox88.onrender.com/puissance4/show';
         break;
       case '/twitter':
-        url = 'https://mike-co.onrender.com/twitter/show';
+        url = 'https://backend-ox88.onrender.com/twitter/show';
         break;
       case '/tcg':
-        url = 'https://mike-co.onrender.com/tcg/show';
+        url = 'https://backend-ox88.onrender.com/tcg/show';
         break;
       case '/newsfeed':
-        url = 'https://mike-co.onrender.com/newsfeed/show';
+        url = 'https://backend-ox88.onrender.com/newsfeed/show';
         break;
       default:
-        return; // Optionally handle unknown routes
+        return;
     }
   
     try {
@@ -113,19 +113,19 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'https://mike-co.onrender.com/puissance4/insert';
+        url = 'https://backend-ox88.onrender.com/puissance4/insert';
         break;
       case '/twitter':
-        url = 'https://mike-co.onrender.com/twitter/insert';
+        url = 'https://backend-ox88.onrender.com/twitter/insert';
         break;
       case '/tcg':
-        url = 'https://mike-co.onrender.com/tcg/insert';
+        url = 'https://backend-ox88.onrender.com/tcg/insert';
         break;
       case '/newsfeed':
-        url = 'https://mike-co.onrender.com/newsfeed/insert';
+        url = 'https://backend-ox88.onrender.com/newsfeed/insert';
         break;
       default:
-        return; // Optionally handle unknown routes
+        return;
     }
   
     try {
@@ -143,19 +143,19 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'https://mike-co.onrender.com/puissance4/like';
+        url = 'https://backend-ox88.onrender.com/puissance4/like';
         break;
       case '/twitter':
-        url = 'https://mike-co.onrender.com/twitter/like';
+        url = 'https://backend-ox88.onrender.com/twitter/like';
         break;
       case '/tcg':
-        url = 'https://mike-co.onrender.com/tcg/like';
+        url = 'https://backend-ox88.onrender.com/tcg/like';
         break;
       case '/newsfeed':
-        url = 'https://mike-co.onrender.com/newsfeed/like';
+        url = 'https://backend-ox88.onrender.com/newsfeed/like';
         break;
       default:
-        return; // Optionally handle unknown routes
+        return;
     }
   
     try {
