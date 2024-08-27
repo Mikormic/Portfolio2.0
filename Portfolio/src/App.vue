@@ -78,6 +78,7 @@ onUnmounted(() => {
   position: fixed !important;
   right: 10px;
   transform: rotate(180deg) !important;
+  z-index: 1000;
 }
 
 .navme {
