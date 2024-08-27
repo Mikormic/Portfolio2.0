@@ -22,9 +22,9 @@ const items = ref([
 
 const links = ref([
   { src: ('https://github.com/Mikormic/Portfolio2.0') },
-  { src: ('https://www.instagram.com/pansatv_/') },
+  { src: ('/') },
   { src: ('https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/') },
-  { src: ('https://x.com/elonmusk') }
+  { src: ('/') }
 ])
 const positions = ref([0, 1, 3, 2]); // Initial positions: top-left, top-right, bottom-right, bottom-left
 const isHovered = ref(false);
