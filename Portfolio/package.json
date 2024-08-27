@@ -1,11 +1,12 @@
 {
   "name": "Portfolio",
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
-  },
+    "scripts": {
+      "dev": "vite",
+      "build": "vue-tsc --noEmit && vite build",
+      "preview": "vite preview",
+      "start": "vite preview"
+    },
   "dependencies": {
     "@mdi/font": "6.2.95",
     "animate.css": "^4.1.1",
