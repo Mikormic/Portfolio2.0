@@ -55,16 +55,16 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'http://localhost:3001/puissance4/show';
+        url = 'https://mike-co.onrender.com/puissance4/show';
         break;
       case '/twitter':
-        url = 'http://localhost:3001/twitter/show';
+        url = 'https://mike-co.onrender.com/twitter/show';
         break;
       case '/tcg':
-        url = 'http://localhost:3001/tcg/show';
+        url = 'https://mike-co.onrender.com/tcg/show';
         break;
       case '/newsfeed':
-        url = 'http://localhost:3001/newsfeed/show';
+        url = 'https://mike-co.onrender.com/newsfeed/show';
         break;
       default:
         return; // Optionally handle unknown routes
@@ -113,16 +113,16 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'http://localhost:3001/puissance4/insert';
+        url = 'https://mike-co.onrender.com/puissance4/insert';
         break;
       case '/twitter':
-        url = 'http://localhost:3001/twitter/insert';
+        url = 'https://mike-co.onrender.com/twitter/insert';
         break;
       case '/tcg':
-        url = 'http://localhost:3001/tcg/insert';
+        url = 'https://mike-co.onrender.com/tcg/insert';
         break;
       case '/newsfeed':
-        url = 'http://localhost:3001/newsfeed/insert';
+        url = 'https://mike-co.onrender.com/newsfeed/insert';
         break;
       default:
         return; // Optionally handle unknown routes
@@ -143,16 +143,16 @@
     let url: string;
     switch (route.path) {
       case '/puissance4':
-        url = 'http://localhost:3001/puissance4/like';
+        url = 'https://mike-co.onrender.com/puissance4/like';
         break;
       case '/twitter':
-        url = 'http://localhost:3001/twitter/like';
+        url = 'https://mike-co.onrender.com/twitter/like';
         break;
       case '/tcg':
-        url = 'http://localhost:3001/tcg/like';
+        url = 'https://mike-co.onrender.com/tcg/like';
         break;
       case '/newsfeed':
-        url = 'http://localhost:3001/newsfeed/like';
+        url = 'https://mike-co.onrender.com/newsfeed/like';
         break;
       default:
         return; // Optionally handle unknown routes
