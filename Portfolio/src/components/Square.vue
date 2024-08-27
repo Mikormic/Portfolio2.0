@@ -4,7 +4,7 @@
       <div v-for="(item, index) in items" :key="index"
         :class="['item', `position-${positions[index]}`, { 'hovered-item': hoveredIndex === index }]"
         @mouseover="onHover(index)" @mouseleave="onLeave">
-          <a :href="links[index].src"><v-img width="30" :src="item.src"></v-img>ok</a>
+          <a :href="links[index].src"><v-img width="20" :src="item.src"></v-img>ok</a>
       </div>
     </div>
   </v-container>
