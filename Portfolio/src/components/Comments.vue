@@ -60,7 +60,7 @@
       case '/twitter':
         url = 'https://backend-ox88.onrender.com/twitter/show';
         break;
-      case '/tcg':
+      case '/my-tcg':
         url = 'https://backend-ox88.onrender.com/tcg/show';
         break;
       case '/newsfeed':

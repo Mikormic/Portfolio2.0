@@ -19,7 +19,7 @@
             <RouterLink class="link-span" to="/cv">CV</RouterLink>
           </li>
           <li>
-            <a class="link-span" href="/">mickael.lesueur@epitech.eu</a>
+            <a class="link-span" href="mailto:lesueur774@gmail.com">lesueur774@gmail.com</a>
           </li>
         </ul>
       </div>
