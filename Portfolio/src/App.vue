@@ -9,14 +9,14 @@
       <div :style="{ opacity: titleOpacity }">
         <RouterLink id="title" to="/">
           <span class="animate__animated" :class="{ 'animate__animated animate__backInLeft': Animations }">MIKE</span>
-          <span class="animate__animated" :class="{ 'animate__animated animate__backInRight': Animations }" >.co</span>
+          <span class="animate__animated" :class="{ 'animate__animated animate__backInRight': Animations }">.co</span>
         </RouterLink>
         <ul class="animate__animated" :class="{ 'animate__animated animate__backInUp': Animations }">
           <li>
-        <RouterLink class="link-span" to="/about">À propos</RouterLink>
+            <RouterLink class="link-span" to="/about">À propos</RouterLink>
           </li>
           <li>
-        <RouterLink class="link-span" to="/cv">CV</RouterLink>
+            <RouterLink class="link-span" to="/cv">CV</RouterLink>
           </li>
           <li>
             <a class="link-span" href="/">mickael.lesueur@epitech.eu</a>
@@ -51,7 +51,7 @@ onMounted(() => {
 });
 
 // Surveille les changements de route
-watch(() => route.path, (newPath) => {
+watch(() => route.path, (newPath: string) => {
   isHomePage.value = newPath === '/';
 });
 
@@ -95,7 +95,7 @@ onUnmounted(() => {
   color: #ffffff;
 }
 
-.link-span{
+.link-span {
   text-decoration: none;
   color: #ffffff;
 }
