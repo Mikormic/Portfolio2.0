@@ -82,22 +82,22 @@
     fetchData();
   });
   
-  const imagePaths = [
-    '/src/assets/profilPicture/icons8-cloud-akatsuki-96.png',
-    '/src/assets/profilPicture/icons8-doraemon-96.png',
-    '/src/assets/profilPicture/icons8-dragon-ball-legends-100.png',
-    '/src/assets/profilPicture/icons8-monkey-d-luffy-96.png',
-    '/src/assets/profilPicture/icons8-sakura-haruno-96.png',
-    '/src/assets/profilPicture/icons8-satoru-gojo-96.png',
-    '/src/assets/profilPicture/icons8-spider-man-head-96.png',
-    '/src/assets/profilPicture/icons8-vegeta-96.png',
-    '/src/assets/profilPicture/icons8-vegeta-100.png',
-  ];
-  
-  function getRandomImage() {
-    const randomIndex = Math.floor(Math.random() * imagePaths.length);
-    return imagePaths[randomIndex];
-  }
+  const imagePaths = ref([
+  new URL('@/assets/profilPicture/icons8-cloud-akatsuki-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-doraemon-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-dragon-ball-legends-100.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-monkey-d-luffy-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-sakura-haruno-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-satoru-gojo-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-spider-man-head-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-vegeta-96.png', import.meta.url).href,
+  new URL('@/assets/profilPicture/icons8-vegeta-100.png', import.meta.url).href,
+]);
+
+function getRandomImage() {
+  const randomIndex = Math.floor(Math.random() * imagePaths.value.length);
+  return imagePaths.value[randomIndex];
+}
   
   const message = ref('');
   const pseudo = ref('');
