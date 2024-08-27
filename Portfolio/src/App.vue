@@ -35,7 +35,6 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const hasScrolled = ref(false);
 const showArrow = ref(false);
-const showList = ref(false);
 const titleOpacity = ref(1);
 
 const isHomePage = ref(route.path === '/');

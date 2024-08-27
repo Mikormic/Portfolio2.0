@@ -1,19 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "jsx": "preserve",
-    "lib": ["DOM", "ESNext"],
+    "module": "commonjs",
+    "lib": ["ESNext"],
     "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "vite/client"
-    ],
-    "allowJs": true,
+    "types": ["node"],
+    "allowJs": false,
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
@@ -23,9 +19,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*",
-    "src/**/*.vue"
+    "src/**/*"
   ],
   "exclude": ["dist", "node_modules", "cypress"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
