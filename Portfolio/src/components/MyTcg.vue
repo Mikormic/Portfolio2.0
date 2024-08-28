@@ -30,7 +30,7 @@
               <li>Utiliser le framework Jasmine pour le développement dirigé par le comportement (BDD)</li>
             </ul>
           </li>
-          <div v-if="showMore || expanded">
+          <div v-if="showMore">
             <li><strong>Déroulement du projet :</strong>
               <ol>
                 <li><strong>Bootstrap et Introduction :</strong>
