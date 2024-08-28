@@ -1,7 +1,7 @@
 <template>
 
   <v-container style="padding: 5%;">
-    <p style="color: black;">
+    <p style="color: #EAC435;">
       À 16 ans, j’ai eu mon premier contact avec le monde du développement informatique, une étincelle allumée par mon
       oncle qui m’a fait découvrir un site de programmation. Cette découverte a été le début d’une passion qui ne m’a
       plus quitté. J’ai rapidement plongé dans l’univers du code à travers des jeux éducatifs, cherchant à définir mon
