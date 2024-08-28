@@ -54,13 +54,12 @@ onMounted(() => {
   }
 });
 
-// Surveille les changements de route
 watch(() => route.path, (newPath: string) => {
   isHomePage.value = newPath === '/';
 });
 
 const handleScroll = () => {
-  const maxScroll = 200; // Ajustez cette valeur selon vos besoins
+  const maxScroll = 200;
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   titleOpacity.value = Math.max(0, 1 - scrollTop / maxScroll);
   hasScrolled.value = window.scrollY > 0;

@@ -46,7 +46,7 @@
                         grille
                         est pleine sans possibilité de victoire, déclarant la partie nulle.</li>
                 </ol>
-                <div v-if="showMore || expanded">
+                <div v-if="showMore">
                     <h2>Fonctionnalités Implémentées</h2>
                     <ul>
                         <li><strong>Affichage de la Grille:</strong> Utilisation du DOM pour afficher et mettre à jour

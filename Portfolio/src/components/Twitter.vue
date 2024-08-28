@@ -330,11 +330,8 @@ li {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    /* Arrondir les coins */
     box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.11);
-    /* Ombre pour l'effet de profondeur */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animation de l'effet de profondeur */
 }
 
 .depth-right {
@@ -342,10 +339,7 @@ li {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    /* Arrondir les coins */
     box-shadow: -20px 10px 10px rgba(0, 0, 0, 0.11);
-    /* Ombre pour l'effet de profondeur */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animation de l'effet de profondeur */
 }
 </style>

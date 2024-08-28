@@ -40,7 +40,6 @@
   import { useRoute } from 'vue-router';
   import axios from 'axios';
   
-  // Define the interface for comments
   interface Comment {
     _id: string;
     pseudo: string;
