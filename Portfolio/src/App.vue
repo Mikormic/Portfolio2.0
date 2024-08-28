@@ -22,8 +22,8 @@
             <a class="link-span" href="mailto:lesueur774@gmail.com">lesueur774@gmail.com</a>
           </li>
           <li style="display: flex; flex-direction: row;">
-            <a href="https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/"><v-img width="20" src="@/assets/icons/icons8-linkedin-50.png"></v-img></a>
-            <a href="https://github.com/Mikormic/Portfolio2.0"><v-img width="20" src="@/assets/icons/icons8-git-50.png"></v-img></a>
+            <a href="https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/"><v-img width="30" src="@/assets/icons/icons8-linkedin-50.png"></v-img></a>
+            <a href="https://github.com/Mikormic/Portfolio2.0"><v-img width="30" src="@/assets/icons/icons8-git-50.png"></v-img></a>
           </li>
         </ul>
       </div>
@@ -100,6 +100,8 @@ onUnmounted(() => {
 .link-span {
   text-decoration: none;
   color: #ffffff;
+  font-size: larger;
+  border-bottom: 1px solid #EF798A;
 }
 
 #title:hover {
@@ -107,6 +109,7 @@ onUnmounted(() => {
   color: transparent;
   -webkit-text-stroke: 2px #EF798A;
 }
+
 
 @media (max-width: 599px) {
   .navme {
