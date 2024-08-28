@@ -1,7 +1,6 @@
 <template>
 
   <v-container style="padding: 5%;">
-    <RouterLink to="/"><v-img :width="100" aspect-ratio="16/9" cover src="../assets/icons/vers-le-haut.png" id="arrow"></v-img></RouterLink>
     <p style="color: black;">
       À 16 ans, j’ai eu mon premier contact avec le monde du développement informatique, une étincelle allumée par mon
       oncle qui m’a fait découvrir un site de programmation. Cette découverte a été le début d’une passion qui ne m’a

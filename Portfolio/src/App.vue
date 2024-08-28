@@ -1,7 +1,7 @@
 <template>
   <main>
     <RouterLink to="/">
-      <img v-if="showArrow" class="arrow animate__animated animate__backInUp"
+      <img v-if="showArrow" class="arrow"
         src="../src/assets/icons/vers-le-haut.png" alt="" srcset="">
     </RouterLink>
     <v-container v-if="isHomePage" class="navme">
@@ -37,10 +37,21 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const hasScrolled = ref(false);
 const showArrow = ref(false);
 const titleOpacity = ref(1);
 
+watch(() => route.path, (Path: string) => {
+  if (Path !== '/') {
+  showArrow.value = true;
+}
+else {
+  showArrow.value = false;
+}
+});
+
+if (route.path !== '/') {
+  showArrow.value = true;
+}
 const isHomePage = ref(route.path === '/');
 
 const Animations = ref(true);
@@ -62,8 +73,6 @@ const handleScroll = () => {
   const maxScroll = 200;
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   titleOpacity.value = Math.max(0, 1 - scrollTop / maxScroll);
-  hasScrolled.value = window.scrollY > 0;
-  showArrow.value = hasScrolled.value && (route.path !== '/' && route.path !== '/cv' && route.path !== '/about');
 };
 
 onMounted(() => {
