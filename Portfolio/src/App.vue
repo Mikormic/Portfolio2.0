@@ -22,7 +22,7 @@
             <a class="link-span" href="mailto:lesueur774@gmail.com">lesueur774@gmail.com</a>
           </li>
           <li style="display: flex; flex-direction: row;">
-            <a style="margin-right: 5%;" href="https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/"><v-img width="30" src="@/assets/icons/icons8-linkedin-50.png"></v-img></a>
+            <a style="margin-right: 1%;" href="https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/"><v-img width="30" src="@/assets/icons/icons8-linkedin-50.png"></v-img></a>
             <a href="https://github.com/Mikormic/Portfolio2.0"><v-img width="30" src="@/assets/icons/icons8-git-50.png"></v-img></a>
           </li>
         </ul>
