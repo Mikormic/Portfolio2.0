@@ -1,5 +1,4 @@
 <template>
-    <Square class="background-square" />
     <v-container class="perspective-box-far">
         <RouterLink class="face front" to="/puissance4"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">Puissance4</h1></RouterLink>
         <RouterLink class="face front" to="/twitter"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">Twitter</h1></RouterLink>
@@ -100,16 +99,16 @@ li a:visited{
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 6.4vw; /* Ajuste la taille pour la responsivité */
+  font-size: 6.4vw; 
   font-family: 'Druk Text Wide Heavy Trial', sans-serif;
   line-height: 0.3em;
   transition: transform .5s, box-shadow .5s;
   z-index: 1;
   transform: perspective(200px) rotateX(0deg) rotateY(-3deg);
-  word-break: break-word; /* Ajoute cette ligne */
-  overflow-wrap: break-word; /* Ajoute cette ligne */
-  max-width: 100%; /* Assure que le texte ne dépasse pas la largeur de son conteneur */
-  text-align: right; /* Alignement à droite */
+  word-break: break-word; 
+  overflow-wrap: break-word; 
+  max-width: 100%; 
+  text-align: right; 
   align-self: flex-end;
 }
 
@@ -126,7 +125,7 @@ li a:visited{
 @media (max-width: 519px) {
   .perspective-box-far {
   position: fixed;
-  top: 60vw;
+  top: 70vw;
   margin-right: 200px !important;
 }
 

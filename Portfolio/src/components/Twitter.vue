@@ -3,7 +3,7 @@
         <h1 :style="{ opacity: titleOpacity }" id="h1-twitter">Twitter</h1>
         <div id="container-show" style="display: flex; flex-direction: column;">
             <v-container class="container" style="display: flex;">
-                <img class="depth-effect" @click="showModal1 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+                <img class="depth-effect" @click="showModal1 = true" style="margin: 2%; width: 120vw; height: 50vw;"
                     src="../assets/twitter/inscription.png" alt="Aperçu" />
 
                 <div v-if="showModal1" @click="showModal1 = false" class="modal">
@@ -13,6 +13,7 @@
                 </div>
                 <div>
                     <h2>Formulaire d'inscription "Rejoignez DeadBird"</h2>
+                    <div v-if="showMore1">
                     <p>L'image montre une fenêtre modale d'inscription pour le service "DeadBird", qui est la première
                         étape d'un processus en trois étapes. Cette modale se distingue par :</p>
                     <ul>
@@ -36,9 +37,13 @@
                             fluidité maximale et une meilleure expérience utilisateur sans rechargement de page.</li>
                     </ul>
                 </div>
+                    <v-btn @click="toggleShowMore1" class="link-span">
+                {{ showMore1 ? 'Voir Moins' : 'Voir Plus' }}
+            </v-btn>
+                </div>
             </v-container>
-            <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img @click="showModal2 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+            <v-container class="container" style="display: flex; flex-direction: column;">
+                <img @click="showModal2 = true" style="margin: 2%; width: 90vw; height: 50vw;"
                     src="../assets/twitter/tl.png" alt="" srcset="" class="depth-right">
                 <div v-if="showModal2" @click="showModal2 = false" class="modal">
                     <div class="modal-content" @click.stop>
@@ -47,6 +52,7 @@
                 </div>
                 <div>
                     <h2>Interface utilisateur de DeadBird</h2>
+                    <div v-if="showMore2">
                     <p>L'image montre l'interface principale de l'application DeadBird, un réseau social développé avec
                         HTML, CSS, PHP, et JavaScript (Ajax). Les fonctionnalités principales sont les suivantes :</p>
 
@@ -94,9 +100,13 @@
                             temps réel sans rechargement de la page.</li>
                     </ul>
                 </div>
+                    <v-btn @click="toggleShowMore2" class="link-span">
+                {{ showMore2 ? 'Voir Moins' : 'Voir Plus' }}
+            </v-btn>
+                </div>
             </v-container>
-            <v-container class="container" style="display: flex;">
-                <img @click="showModal3 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-effect"
+            <v-container class="container" style="display: flex; flex-direction: column;">
+                <img @click="showModal3 = true" style="margin: 2%; width: 90vw; height: 50vw;" class="depth-effect"
                     src="../assets/twitter/profil.png" alt="" srcset="">
                 <div v-if="showModal3" @click="showModal3 = false" class="modal">
                     <div class="modal-content" @click.stop>
@@ -106,6 +116,7 @@
 
                 <div>
                     <h2>Interface utilisateur de profil DeadBird</h2>
+                    <div v-if="showMore3">
                     <p>L'image montre l'interface de la page de profil utilisateur de l'application DeadBird, un réseau
                         social développé avec HTML, CSS, PHP, et JavaScript (Ajax). Les fonctionnalités principales sont
                         les suivantes :</p>
@@ -157,10 +168,14 @@
                             temps réel sans rechargement de la page.</li>
                     </ul>
                 </div>
+                    <v-btn @click="toggleShowMore3" class="link-span">
+                {{ showMore3 ? 'Voir Moins' : 'Voir Plus' }}
+            </v-btn>
+                </div>
 
             </v-container>
-            <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img @click="showModal4 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-right" src="../assets/twitter/message.gif"
+            <v-container class="container" style="display: flex; flex-direction: column;">
+                <img @click="showModal4 = true" style="margin: 2%; width: 50vw; height: 30vw;" class="depth-right" src="../assets/twitter/message.gif"
                     alt="" srcset="">
                     <div v-if="showModal4" @click="showModal4 = false" class="modal">
                     <div class="modal-content" @click.stop>
@@ -168,8 +183,10 @@
                     </div>
                 </div>
                 <div>
+                    <h2>Messagerie inspirée de Twitter</h2>
+                    <div v-if="showMore4">
                     <ul>
-                        <li><strong>Messagerie inspirée de Twitter</strong></li>
+                        
                         <ol>
                             <li><strong>Recherche Intuitive :</strong>
                                 <ul>
@@ -207,7 +224,10 @@
                             </li>
                         </ol>
                     </ul>
-
+                </div>
+                    <v-btn @click="toggleShowMore4" class="link-span">
+                {{ showMore4 ? 'Voir Moins' : 'Voir Plus' }}
+            </v-btn>
                 </div>
             </v-container>
         </div>
@@ -217,6 +237,25 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+
+const showMore1 = ref(false);
+const showMore2 = ref(false);
+const showMore3 = ref(false);
+const showMore4 = ref(false);
+
+function toggleShowMore1() {
+  showMore1.value = !showMore1.value;
+}
+function toggleShowMore2() {
+  showMore2.value = !showMore2.value;
+}
+function toggleShowMore3() {
+  showMore3.value = !showMore3.value;
+}
+function toggleShowMore4() {
+  showMore4.value = !showMore4.value;
+}
 
 const showModal1 = ref(false);
 const showModal2 = ref(false);

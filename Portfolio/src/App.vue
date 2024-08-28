@@ -1,7 +1,7 @@
 <template>
   <main>
     <RouterLink to="/">
-      <img v-if="showArrow" style="width: 5vw;" class="arrow animate__animated animate__backInUp"
+      <img v-if="showArrow" class="arrow animate__animated animate__backInUp"
         src="../src/assets/icons/vers-le-haut.png" alt="" srcset="">
     </RouterLink>
     <v-container v-if="isHomePage" class="navme">
@@ -20,6 +20,10 @@
           </li>
           <li>
             <a class="link-span" href="mailto:lesueur774@gmail.com">lesueur774@gmail.com</a>
+          </li>
+          <li style="display: flex; flex-direction: row;">
+            <a href="https://www.linkedin.com/in/micka%C3%ABl-lesueur-4748a5201/"><v-img width="20" src="@/assets/icons/icons8-linkedin-50.png"></v-img></a>
+            <a href="https://github.com/Mikormic/Portfolio2.0"><v-img width="20" src="@/assets/icons/icons8-git-50.png"></v-img></a>
           </li>
         </ul>
       </div>
@@ -76,7 +80,6 @@ onUnmounted(() => {
 <style scoped>
 .arrow {
   position: fixed !important;
-  right: 10px;
   transform: rotate(180deg) !important;
   z-index: 1000;
 }
@@ -115,30 +118,43 @@ onUnmounted(() => {
     font-size: 15vw;
     margin-bottom: 10%;
   }
+  .arrow {
+    width: 25vw;
+}
 }
 
 /* Petits écrans (téléphones en mode paysage) */
 @media (min-width: 600px) and (max-width: 767px) {
-  /* Styles pour les téléphones en mode paysage */
+  .arrow {
+    width: 15vw;
+}
 }
 
 /* Tablettes */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* Styles pour les tablettes */
+  .arrow {
+    width: 15vw;
+}
 }
 
 /* Petits ordinateurs portables ou grands tablettes */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  /* Styles pour les petits ordinateurs portables */
+  .arrow {
+    width: 5vw;
+}
 }
 
 /* Ordinateurs de bureau */
 @media (min-width: 1280px) and (max-width: 1919px) {
-  /* Styles pour les ordinateurs de bureau */
+  .arrow {
+    width: 5vw;
+}
 }
 
 /* Grands écrans (moniteurs haute résolution) */
 @media (min-width: 1920px) {
-  /* Styles pour les grands écrans */
+  .arrow {
+    width: 5vw;
+}
 }
 </style>

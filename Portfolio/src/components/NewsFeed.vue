@@ -8,7 +8,8 @@
 
                 <div v-if="showModal1" @click="showModal1 = false" class="modal">
                     <div class="modal-content" @click.stop>
-                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="/src/assets/newsfeed/Newsfeed-home.PNG" />
+                        <img style="margin: 2%; width: 90vw; height: 50vw;"
+                            src="/src/assets/newsfeed/Newsfeed-home.PNG" />
                     </div>
                 </div>
                 <div>
@@ -16,12 +17,13 @@
                     <p>Visualisation des projets sur lesquels on est affilié.</p>
                 </div>
             </v-container>
-            <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img @click="showModal2 = true" style="margin: 2%; width: 220vw; height: 50vw;"
+            <v-container class="container" style="display: flex; flex-direction: column;">
+                <img @click="showModal2 = true" style="margin: 2%; width: 90vw; height: 50vw;"
                     src="../assets/newsfeed/Newsfeed-creation.PNG" alt="" srcset="" class="depth-right">
                 <div v-if="showModal2" @click="showModal2 = false" class="modal">
                     <div class="modal-content" @click.stop>
-                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-creation.PNG" class="responsive" />
+                        <img style="margin: 2%; width: 90vw; height: 50vw;"
+                            src="../assets/newsfeed/Newsfeed-creation.PNG" class="responsive" />
                     </div>
                 </div>
                 <div>
@@ -33,8 +35,8 @@
                                 <li>Historique des reports selon le report choisi</li>
                                 <li>Crétation du mail</li>
                                 <li>Possibilité de définir le mail comme important ou non</li>
-                            </ul> 
-                            </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </v-container>
@@ -43,7 +45,8 @@
                     src="../assets/newsfeed/Newsfeed-mail-teams.PNG" alt="" srcset="">
                 <div v-if="showModal3" @click="showModal3 = false" class="modal">
                     <div class="modal-content" @click.stop>
-                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-mail-teams.PNG" class="responsive" />
+                        <img style="margin: 2%; width: 90vw; height: 50vw;"
+                            src="../assets/newsfeed/Newsfeed-mail-teams.PNG" class="responsive" />
                     </div>
                 </div>
 
@@ -54,11 +57,12 @@
 
             </v-container>
             <v-container class="container" style="display: flex; flex-direction: row-reverse;">
-                <img @click="showModal4 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-right" src="../assets/newsfeed/Newsfeed-preview.PNG"
-                    alt="" srcset="">
-                    <div v-if="showModal4" @click="showModal4 = false" class="modal">
+                <img @click="showModal4 = true" style="margin: 2%; width: 220vw; height: 50vw;" class="depth-right"
+                    src="../assets/newsfeed/Newsfeed-preview.PNG" alt="" srcset="">
+                <div v-if="showModal4" @click="showModal4 = false" class="modal">
                     <div class="modal-content" @click.stop>
-                        <img style="margin: 2%; width: 90vw; height: 50vw;" src="../assets/newsfeed/Newsfeed-preview.PNG" class="responsive" />
+                        <img style="margin: 2%; width: 90vw; height: 50vw;"
+                            src="../assets/newsfeed/Newsfeed-preview.PNG" class="responsive" />
                     </div>
                 </div>
                 <div>
@@ -76,6 +80,17 @@
                 </div>
             </v-container>
         </div>
+        <p>NewsFeed 2.0 est mon plus gros projet d’alternance, j’ai décidé de partir sur du Vuejs pour le front, du Node
+            pour le back et MongoDB pour la partie base de données. Nous avons choisi ces technologies car elles sont
+            modernes et je voulais les maîtriser pour la suite de mon parcours professionnel. La direction artistique
+            est très inspirée des outils déjà en place chez Ubisoft, comme la connexion. Ce qui m’a permis de gagner
+            énormément de temps et de me focaliser sur la partie technique. J’ai dû utiliser le WYSIWYG de Prime Vue
+            avec des ajouts par rapport aux demandes des utilisateurs.
+
+            A noter que j’ai mis en place des réunions à chaque grosse avancée du projet pour avoir des retours sur mon
+            travail et me permettre de rester au plus près des attentes des utilisateurs finaux. Dans ce contexte, j’ai
+            dû organiser ces réunions, mettre en place l’ordre du jour, rédiger le compte rendu et adapter mes tâches en
+            conséquence. </p>
     </div>
     <Comments />
 
