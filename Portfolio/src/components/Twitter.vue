@@ -1,6 +1,9 @@
 <template>
     <div id="div-twitter">
+        
         <h1 :style="{ opacity: titleOpacity }" id="h1-twitter">Twitter</h1>
+        <a href="https://github.com/Mikormic/twitter"><img id="iconeGit" style="margin-left: 10%;" width="50" src="../assets/icons/icons8-git-50.png" alt=""></a>
+
         <div id="container-show" style="display: flex; flex-direction: column;">
             <v-container class="container" style="display: flex;">
                 <img class="depth-effect" @click="showModal1 = true" style="margin: 2%; width: 120vw; height: 50vw;"
@@ -279,6 +282,9 @@ onBeforeUnmount(() => {
 });
 </script>
 <style>
+
+
+
 .modal {
     position: fixed;
     top: 0;

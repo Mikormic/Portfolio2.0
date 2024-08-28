@@ -17,6 +17,8 @@
             </div>
         </div>
         <div id="p4">
+        <a href="https://github.com/Mikormic/puissance4"><img width="50" src="../assets/icons/icons8-git-50.png" alt=""></a>
+
             <div>
                 <h2>Résumé du Projet</h2>
                 <p>Le projet consiste à créer une version interactive du jeu classique "Puissance 4" en utilisant

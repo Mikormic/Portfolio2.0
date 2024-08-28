@@ -5,6 +5,11 @@
         <RouterLink class="face front" to="/my-tcg"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">TCG</h1></RouterLink>
         <RouterLink class="face front" to="/newsfeed"><h1 class="h1-home animate__animated" :class="{ 'animate__bounceInDown': Animations }">NewsFeed</h1></RouterLink>
     </v-container>
+    <v-footer style="position: fixed; bottom: 0; width: 100%; z-index: 1000; background-color: transparent;">
+  <v-row justify="center" no-gutters>
+    <p style="color: black; padding-bottom: 0;">&copy; 2024 Mickaël Lesueur. Tous droits réservés.</p>
+  </v-row>
+</v-footer>
 </template>
 
 <script setup lang="ts">

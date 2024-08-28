@@ -4,6 +4,8 @@
     <div style="display: flex; flex-direction: column;">
       <img style="position: relative; left: 28vw;width:45vw !important" src="../assets/my-tcg/my-tcg.gif" alt="">
       <div>
+        <a href="https://github.com/Mikormic/tcg"><img id="iconeGit" style="margin-left: 10%;" width="50" src="../assets/icons/icons8-git-50.png" alt=""></a>
+
         <ul>
           <li><strong>Titre du projet :</strong> W3 - Tests (W-WEB-310) : My_TCG</li>
           <li><strong>Objectif :</strong>
