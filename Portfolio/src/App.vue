@@ -41,7 +41,7 @@ const showArrow = ref(false);
 const titleOpacity = ref(1);
 
 watch(() => route.path, (Path: string) => {
-  if (Path !== '/' && Path !== '/about') {
+  if (Path !== '/' && Path !== '/about' && Path !== '/cv') {
   showArrow.value = true;
 }
 else {
